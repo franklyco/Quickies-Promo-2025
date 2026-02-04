@@ -1,0 +1,25 @@
+<script>
+window.shopifyDebug = {
+  shop: {{ shop | json }},
+  theme: {{ theme | json }},
+  settings: {{ settings | json }},
+  product: {{ product | json }},
+  productCollections: {{ product.collections | json }},
+  customer: {{ customer | json }},
+  cartNote: {{ cart.note | json }},
+  cartAttributes: {{ cart.attributes | json }},
+  shopLocale: {{ shop.locale | json }},
+  allTags: {{ product.tags | json }},
+  template: "{{ template.name }}",
+  request: {
+    path: "{{ request.path }}",
+    host: "{{ request.host }}",
+    pageType: "{{ request.page_type }}"
+  },
+  collection: {% if collection %}{{ collection | json }}{% else %}null{% endif %}
+};
+
+console.groupCollapsed("🛠️ Shopify Debug Data");
+console.log(window.shopifyDebug);
+console.groupEnd();
+</script>

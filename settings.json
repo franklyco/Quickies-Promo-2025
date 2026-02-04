@@ -1,0 +1,613 @@
+{
+    "shop": {
+        "error": "json not allowed for this object"
+    },
+    "theme": {
+        "error": "json not allowed for this object"
+    },
+    "settings": {
+        "color_primary_text": "#302925",
+        "color_primary_background": "#f9f7f4",
+        "color_primary_accent": "#fadefc",
+        "color_primary_card": "#f9f7f4",
+        "color_primary_gradient": "linear-gradient(135deg, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 83%)",
+        "color_secondary_text": "#302925",
+        "color_secondary_background": "#fadefc",
+        "color_secondary_accent": "#f9f7f4",
+        "color_secondary_card": "#f9f7f4",
+        "color_secondary_gradient": "linear-gradient(135deg, rgba(187, 139, 241, 1) 11%, rgba(255, 255, 255, 1) 83%)",
+        "color_tertiary_text": "#302925",
+        "color_tertiary_background": "#cdb7f2",
+        "color_tertiary_accent": "#f9f7f4",
+        "color_tertiary_card": "#cdb7f2",
+        "color_tertiary_gradient": "linear-gradient(310deg, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 84%)",
+        "color_quaternary_text": "#ff7047",
+        "color_quaternary_background": "#302925",
+        "color_quaternary_accent": "#f9f7f4",
+        "color_quaternary_card": "#f9f7f4",
+        "color_quaternary_gradient": "linear-gradient(89deg, rgba(219, 149, 250, 1) 7%, rgba(148, 88, 255, 1) 94%)",
+        "button_color": "accent",
+        "button_text_color": "automatic",
+        "secondary_button_color": "match_background",
+        "color_border": "#302925",
+        "drawer_color_scheme": "primary",
+        "disable_color_contrast_check": false,
+        "base_font_size": 14,
+        "base_line_height": 1.2,
+        "type_heading_font": {
+            "error": "json not allowed for this object"
+        },
+        "heading_uppercase": true,
+        "heading_letterspacing": -25,
+        "heading_line_height": 1,
+        "base_heading_size": "2xl:7xl",
+        "template_heading_size": "2xl:9xl",
+        "secondary_heading_size": "2xl:2xl",
+        "type_main_font": {
+            "error": "json not allowed for this object"
+        },
+        "header_font": "font-main",
+        "header_uppercase": true,
+        "product_tile_uppercase": false,
+        "button_uppercase": true,
+        "stickers_uppercase": true,
+        "vertical_spacing_between_sections": "2rem:4rem",
+        "show_border_between_sections": true,
+        "section_border_thickness": 1,
+        "apply_to_base_headings": true,
+        "apply_to_template_headings": true,
+        "apply_to_secondary_headings": true,
+        "heading_color": "color-scheme-text",
+        "heading_stroke_thickness": 0,
+        "heading_stroke_color": "color-scheme-text",
+        "heading_drop_shadow_style": "none",
+        "heading_drop_shadow_size": 0,
+        "heading_drop_shadow_color": "color-scheme-text",
+        "button_border_radius": "9999px",
+        "button_border_width": 1,
+        "button_drop_shadow_size": 0,
+        "button_shadow_color": "color-scheme-accent",
+        "button_shadow_direction": "bottom_right",
+        "button_show_border_on_shadow": true,
+        "sticker_border_radius": "0",
+        "sticker_border_width": 2,
+        "sticker_border_color": "color-scheme-text",
+        "sticker_drop_shadow_size": 0,
+        "sticker_shadow_color": "color-scheme-text",
+        "sticker_shadow_direction": "bottom_right",
+        "sticker_show_border_on_shadow": false,
+        "card_border_radius": "0",
+        "card_border_width": 1,
+        "card_border_color": "color-scheme-text",
+        "card_drop_shadow_size": 0,
+        "card_shadow_style": "full",
+        "card_shadow_color": "color-scheme-accent",
+        "card_shadow_direction": "bottom_right",
+        "card_show_border_on_shadow": true,
+        "media_border_radius": "0",
+        "media_border_width": 1,
+        "media_border_color": "color-scheme-text",
+        "media_drop_shadow_size": 0,
+        "media_shadow_style": "full",
+        "media_shadow_color": "color-scheme-gradient",
+        "media_shadow_direction": "bottom_right",
+        "media_show_border_on_shadow": true,
+        "icon_thickness": 1.3,
+        "product_tiles_show_vendor": false,
+        "product_tiles_second_image_on_hover": true,
+        "product_tiles_scatter": false,
+        "product_tiles_aspect_ratio": "aspect-w-3 aspect-h-4",
+        "product_tile_media_shape": "default",
+        "show_on_sale_and_sold_out_badges": true,
+        "on_sale_badge_shape": "star_2",
+        "sold_out_badge_shape": "circle",
+        "product_tile_metafield_badge": "badge",
+        "metafield_badge_shape": "diamond",
+        "parallax_intensity": 50,
+        "currency_code_enabled": false,
+        "predictive_search_enabled": true,
+        "search_products": true,
+        "search_collections": false,
+        "search_articles": false,
+        "search_pages": false,
+        "predictive_search_crop": "aspect-w-3 aspect-h-4",
+        "sharing_display": "icons",
+        "share_facebook": true,
+        "share_twitter": true,
+        "share_pinterest": true,
+        "social_style": "icons",
+        "social_instagram_link": "https://instagram.com/getquickies",
+        "social_facebook_link": "https://facebook.com/getquickies",
+        "social_twitter_link": "",
+        "social_pinterest_link": "https://pinterest.com/getquickies",
+        "social_snapchat_link": "",
+        "social_tiktok_link": "https://tiktok.com/@getquickies",
+        "social_tumblr_link": "",
+        "social_youtube_link": "",
+        "social_vimeo_link": "",
+        "social_linkedin_link": "",
+        "social_email_link": "youup@getquickies.com",
+        "cart_icon": "cart",
+        "cart_notes_enable": false,
+        "enable_accelerated_checkout": true,
+        "cart_vendor_enable": false,
+        "cart_type": "modal",
+        "open_modal_on_add_to_cart": true,
+        "enable_custom_cursor_default": true,
+        "enable_custom_cursor_links": true,
+        "cursor_x_position": 0,
+        "cursor_y_position": 0,
+        "favicon": "//getquickies.com/cdn/shop/files/QUICKIES_63.png?v=1713146302",
+        "checkout_logo_image": "//getquickies.com/cdn/shop/files/QUICKIES_61.png?v=1713143436",
+        "checkout_logo_position": "left",
+        "checkout_logo_size": "small",
+        "checkout_body_background_color": "#fff",
+        "checkout_input_background_color_mode": "white",
+        "checkout_sidebar_background_color": "#ffffff",
+        "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+        "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+        "checkout_accent_color": "#f7dfff",
+        "checkout_button_color": "#f7dfff",
+        "checkout_error_color": "#ff7878",
+        "navigation_uppercase": true,
+        "product_tiles_quick_buy": true,
+        "product_grid_uppercase": true,
+        "color_primary_accent_inverse": "#022145",
+        "color_secondary_accent_inverse": "#1b1e25",
+        "color_tertiary_accent_inverse": "#141b1d",
+        "button_border_color": "color-scheme-text",
+        "button_shadow_style": "full",
+        "sticker_shadow_style": "full",
+        "scatter_product_tiles": true,
+        "sticker_color": "bg-scheme-card text-scheme-text",
+        "sticker_show_shadow": true,
+        "image_style_1_style": "clip-triangle",
+        "image_style_1_border_width": 2,
+        "image_style_1_border_color": "bg-scheme-text",
+        "image_style_1_show_shadow": true,
+        "image_style_1_shadow_style": "bg-current",
+        "image_style_1_shadow_color": "text-scheme-text",
+        "button_show_shadow": true,
+        "card_show_shadow": true,
+        "card_drop_shadow_spread": 6,
+        "color_primary_background_gradient": "linear-gradient(136deg, rgba(10, 234, 237, 1) 11%, rgba(250, 13, 253, 1) 84%)",
+        "color_secondary_background_gradient": "",
+        "color_tertiary_background_gradient": "",
+        "gradient_color_1": "#d481ff",
+        "gradient_color_2": "#00ffc6",
+        "gradient_color_3": "#618eff",
+        "gradient_color_4": "#fff286",
+        "heading_drop_shadow_spread": 6,
+        "button_style": "none",
+        "heading_drop_shadow_opacity": 8,
+        "color_primary_alt_background": "#ffaeae",
+        "color_primary_meta": "#161414",
+        "customer_layout": "customer_area"
+    },
+    "product": {
+        "id": 9174869606617,
+        "title": "Golden Hour Press On Nails (24PC)",
+        "handle": "golden-hour-press-on-nails-24pc",
+        "description": "<p> </p>\n<h3 style=\"text-align: center;\">GET A SALON QUALITY MANICURE IN UNDER<span> </span>10 MINUTES AND FOR LESS THAN $30</h3>\n<p style=\"text-align: center;\">Who doesn't love a good Quickie? Our reusable, press-on nails are designed to give you back your time and money without sacrificing a cute, IG worthy mani. Use<span> </span><a href=\"https://getquickies.myshopify.com/pages/how-to-apply\" target=\"_blank\">our signature application method</a><span> </span>for a long lasting, satisfying Quickie that you can wear for weeks. Seriously, it doesn't matter if you're opening your favourite canned bevy, struggling with overweight luggage at the airport, or whatever floats your boat — these bad boys aren't no one minute man *wink*wink*. </p>\n<p style=\"text-align: center;\"><br></p>\n<p style=\"text-align: left;\"><strong><span>IN THE KIT<br></span></strong></p>\n<div style=\"text-align: left;\" class=\"Collapsible__Inner\">\n<div class=\"Collapsible__Content\">\n<div class=\"Rte\">\n<ul>\n<li>24 nails in 10 sizes (fits average, petite, and large sized nails)</li>\n<li>Liquid Glue <em>(Ingredients:</em> <meta charset=\"utf-8\"> <em data-mce-fragment=\"1\">Ethyl Cyanoacrylate, Polymethyl, Methacrylate, BHA, CI 15850 Tocopherol, Panthenol, Retinyl Palmitate)</em><br>\n</li>\n<li>Nail File<br>\n</li>\n</ul>\n<p> </p>\n<p><span><strong>COLOUR:</strong> Nude<br></span><span><strong>LENGTH:</strong> Short<br><strong data-mce-fragment=\"1\">DESIGN:</strong> Solid<br><strong data-mce-fragment=\"1\">FINISH:</strong> Chrome Gel<br></span><span><strong>SHAPE:</strong> Oval<br></span><span><br></span><meta charset=\"utf-8\"></p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">VEGAN &amp; CRUELTY-FREE</span></p>\n<p data-mce-fragment=\"1\"> </p>\n<p data-mce-fragment=\"1\"> </p>\n<p data-mce-fragment=\"1\"><strong><em>Please note that due to sanitary reasons we do not offer returns or exchanges on any of our products. ALL PRODUCTS ARE FINAL SALE.</em></strong></p>\n</div>\n</div>\n</div>",
+        "published_at": "2025-05-06T07:14:28-07:00",
+        "created_at": "2025-05-01T09:36:38-07:00",
+        "vendor": "Quickies",
+        "type": "",
+        "tags": [
+            "chrome",
+            "core",
+            "nude",
+            "nudes",
+            "oval",
+            "short",
+            "solid"
+        ],
+        "price": 1900,
+        "price_min": 1900,
+        "price_max": 1900,
+        "available": true,
+        "price_varies": false,
+        "compare_at_price": 2300,
+        "compare_at_price_min": 2300,
+        "compare_at_price_max": 2300,
+        "compare_at_price_varies": false,
+        "variants": [
+            {
+                "id": 46596210557145,
+                "title": "Default Title",
+                "option1": "Default Title",
+                "option2": null,
+                "option3": null,
+                "sku": "QCK-GOLHR",
+                "requires_shipping": true,
+                "taxable": true,
+                "featured_image": null,
+                "available": true,
+                "name": "Golden Hour Press On Nails (24PC)",
+                "public_title": null,
+                "options": [
+                    "Default Title"
+                ],
+                "price": 1900,
+                "weight": 9,
+                "compare_at_price": 2300,
+                "inventory_management": "shopify",
+                "barcode": null,
+                "requires_selling_plan": false,
+                "selling_plan_allocations": []
+            }
+        ],
+        "images": [
+            "//getquickies.com/cdn/shop/files/10_d88850b3-1222-4e25-a534-9b0fb39d03ba.png?v=1746117407",
+            "//getquickies.com/cdn/shop/files/11_ee11a3f4-00f1-4ce5-96a1-a0f6ba85ffbd.png?v=1746117407",
+            "//getquickies.com/cdn/shop/files/12_2e819d52-c267-48c1-8f3d-6d2c7bf036ad.png?v=1746117407"
+        ],
+        "featured_image": "//getquickies.com/cdn/shop/files/10_d88850b3-1222-4e25-a534-9b0fb39d03ba.png?v=1746117407",
+        "options": [
+            "Title"
+        ],
+        "media": [
+            {
+                "alt": null,
+                "id": 37117732061401,
+                "position": 1,
+                "preview_image": {
+                    "aspect_ratio": 0.8,
+                    "height": 2363,
+                    "width": 1890,
+                    "src": "//getquickies.com/cdn/shop/files/10_d88850b3-1222-4e25-a534-9b0fb39d03ba.png?v=1746117407"
+                },
+                "aspect_ratio": 0.8,
+                "height": 2363,
+                "media_type": "image",
+                "src": "//getquickies.com/cdn/shop/files/10_d88850b3-1222-4e25-a534-9b0fb39d03ba.png?v=1746117407",
+                "width": 1890
+            },
+            {
+                "alt": null,
+                "id": 37117732094169,
+                "position": 2,
+                "preview_image": {
+                    "aspect_ratio": 0.8,
+                    "height": 2363,
+                    "width": 1890,
+                    "src": "//getquickies.com/cdn/shop/files/11_ee11a3f4-00f1-4ce5-96a1-a0f6ba85ffbd.png?v=1746117407"
+                },
+                "aspect_ratio": 0.8,
+                "height": 2363,
+                "media_type": "image",
+                "src": "//getquickies.com/cdn/shop/files/11_ee11a3f4-00f1-4ce5-96a1-a0f6ba85ffbd.png?v=1746117407",
+                "width": 1890
+            },
+            {
+                "alt": null,
+                "id": 37117732126937,
+                "position": 3,
+                "preview_image": {
+                    "aspect_ratio": 0.8,
+                    "height": 2363,
+                    "width": 1890,
+                    "src": "//getquickies.com/cdn/shop/files/12_2e819d52-c267-48c1-8f3d-6d2c7bf036ad.png?v=1746117407"
+                },
+                "aspect_ratio": 0.8,
+                "height": 2363,
+                "media_type": "image",
+                "src": "//getquickies.com/cdn/shop/files/12_2e819d52-c267-48c1-8f3d-6d2c7bf036ad.png?v=1746117407",
+                "width": 1890
+            }
+        ],
+        "requires_selling_plan": false,
+        "selling_plan_groups": [],
+        "content": "<p> </p>\n<h3 style=\"text-align: center;\">GET A SALON QUALITY MANICURE IN UNDER<span> </span>10 MINUTES AND FOR LESS THAN $30</h3>\n<p style=\"text-align: center;\">Who doesn't love a good Quickie? Our reusable, press-on nails are designed to give you back your time and money without sacrificing a cute, IG worthy mani. Use<span> </span><a href=\"https://getquickies.myshopify.com/pages/how-to-apply\" target=\"_blank\">our signature application method</a><span> </span>for a long lasting, satisfying Quickie that you can wear for weeks. Seriously, it doesn't matter if you're opening your favourite canned bevy, struggling with overweight luggage at the airport, or whatever floats your boat — these bad boys aren't no one minute man *wink*wink*. </p>\n<p style=\"text-align: center;\"><br></p>\n<p style=\"text-align: left;\"><strong><span>IN THE KIT<br></span></strong></p>\n<div style=\"text-align: left;\" class=\"Collapsible__Inner\">\n<div class=\"Collapsible__Content\">\n<div class=\"Rte\">\n<ul>\n<li>24 nails in 10 sizes (fits average, petite, and large sized nails)</li>\n<li>Liquid Glue <em>(Ingredients:</em> <meta charset=\"utf-8\"> <em data-mce-fragment=\"1\">Ethyl Cyanoacrylate, Polymethyl, Methacrylate, BHA, CI 15850 Tocopherol, Panthenol, Retinyl Palmitate)</em><br>\n</li>\n<li>Nail File<br>\n</li>\n</ul>\n<p> </p>\n<p><span><strong>COLOUR:</strong> Nude<br></span><span><strong>LENGTH:</strong> Short<br><strong data-mce-fragment=\"1\">DESIGN:</strong> Solid<br><strong data-mce-fragment=\"1\">FINISH:</strong> Chrome Gel<br></span><span><strong>SHAPE:</strong> Oval<br></span><span><br></span><meta charset=\"utf-8\"></p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">VEGAN &amp; CRUELTY-FREE</span></p>\n<p data-mce-fragment=\"1\"> </p>\n<p data-mce-fragment=\"1\"> </p>\n<p data-mce-fragment=\"1\"><strong><em>Please note that due to sanitary reasons we do not offer returns or exchanges on any of our products. ALL PRODUCTS ARE FINAL SALE.</em></strong></p>\n</div>\n</div>\n</div>"
+    },
+    "productCollections": [
+        {
+            "id": 411108704473,
+            "handle": "chrome",
+            "title": "Chrome",
+            "updated_at": "2025-07-09T21:50:09-07:00",
+            "body_html": "",
+            "published_at": "2023-09-23T19:14:40-07:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "disjunctive": false,
+            "rules": [
+                {
+                    "column": "tag",
+                    "relation": "equals",
+                    "condition": "chrome"
+                }
+            ],
+            "published_scope": "global"
+        },
+        {
+            "id": 403551125721,
+            "handle": "core",
+            "title": "CORE COLLECTION",
+            "updated_at": "2025-07-09T22:20:06-07:00",
+            "body_html": "",
+            "published_at": "2022-07-24T12:35:47-07:00",
+            "sort_order": "created-desc",
+            "template_suffix": "",
+            "disjunctive": false,
+            "rules": [
+                {
+                    "column": "tag",
+                    "relation": "equals",
+                    "condition": "core"
+                }
+            ],
+            "published_scope": "global",
+            "image": {
+                "created_at": "2022-07-24T12:37:23-07:00",
+                "alt": "Press On Nails in Canada",
+                "width": 1080,
+                "height": 1350,
+                "src": "//getquickies.com/cdn/shop/collections/QUICKIE-PRODUCTTEMP.png?v=1684177337"
+            }
+        },
+        {
+            "id": 425630531801,
+            "handle": "discount-eligible",
+            "title": "DISCOUNT ELIGIBLE",
+            "updated_at": "2025-07-09T22:20:11-07:00",
+            "body_html": "",
+            "published_at": "2024-07-16T08:31:03-07:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "disjunctive": false,
+            "rules": [
+                {
+                    "column": "variant_price",
+                    "relation": "less_than",
+                    "condition": "29.96"
+                }
+            ],
+            "published_scope": "global"
+        },
+        {
+            "id": 437302919385,
+            "handle": "euro-summer",
+            "updated_at": "2025-07-09T19:20:18-07:00",
+            "published_at": "2025-06-10T08:24:57-07:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "published_scope": "global",
+            "title": "Euro Summer",
+            "body_html": ""
+        },
+        {
+            "id": 438196273369,
+            "handle": "fivepromo",
+            "updated_at": "2025-07-09T20:58:19-07:00",
+            "published_at": "2025-07-09T20:58:19-07:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "published_scope": "global",
+            "title": "FIVEPROMO",
+            "body_html": ""
+        },
+        {
+            "id": 400547119321,
+            "handle": "new",
+            "updated_at": "2025-07-09T22:20:11-07:00",
+            "published_at": "2022-05-18T22:01:28-07:00",
+            "sort_order": "manual",
+            "template_suffix": "",
+            "published_scope": "global",
+            "title": "NEW ARRIVALS",
+            "body_html": "",
+            "image": {
+                "created_at": "2022-06-07T14:38:30-07:00",
+                "alt": "Best Press On Nails Canada ",
+                "width": 1080,
+                "height": 1350,
+                "src": "//getquickies.com/cdn/shop/collections/6.png?v=1696002346"
+            }
+        },
+        {
+            "id": 411108475097,
+            "handle": "nude",
+            "title": "Nude",
+            "updated_at": "2025-07-09T20:55:15-07:00",
+            "body_html": "",
+            "published_at": "2023-09-23T19:13:18-07:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "disjunctive": true,
+            "rules": [
+                {
+                    "column": "tag",
+                    "relation": "equals",
+                    "condition": "nude"
+                },
+                {
+                    "column": "tag",
+                    "relation": "equals",
+                    "condition": "nudes"
+                }
+            ],
+            "published_scope": "global"
+        },
+        {
+            "id": 393983033561,
+            "handle": "oval",
+            "title": "OVAL",
+            "updated_at": "2025-07-09T19:20:18-07:00",
+            "body_html": "",
+            "published_at": "2021-12-17T20:55:16-08:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "disjunctive": false,
+            "rules": [
+                {
+                    "column": "tag",
+                    "relation": "equals",
+                    "condition": "oval"
+                }
+            ],
+            "published_scope": "global",
+            "image": {
+                "created_at": "2022-06-07T14:12:44-07:00",
+                "alt": "Oval Nails",
+                "width": 1080,
+                "height": 1350,
+                "src": "//getquickies.com/cdn/shop/collections/THEBIRDSPAPAYA_2.png?v=1696002225"
+            }
+        },
+        {
+            "id": 402823708889,
+            "handle": "sale",
+            "title": "SALE",
+            "updated_at": "2025-07-09T22:20:11-07:00",
+            "body_html": "",
+            "published_at": "2022-07-05T07:57:38-07:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "disjunctive": false,
+            "rules": [
+                {
+                    "column": "variant_compare_at_price",
+                    "relation": "greater_than",
+                    "condition": "1"
+                }
+            ],
+            "published_scope": "global",
+            "image": {
+                "created_at": "2023-04-12T10:30:00-07:00",
+                "alt": null,
+                "width": 1080,
+                "height": 1350,
+                "src": "//getquickies.com/cdn/shop/collections/22.png?v=1681320600"
+            }
+        },
+        {
+            "id": 393983262937,
+            "handle": "short",
+            "title": "SHORT",
+            "updated_at": "2025-07-09T22:20:08-07:00",
+            "body_html": "",
+            "published_at": "2021-12-17T20:59:38-08:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "disjunctive": false,
+            "rules": [
+                {
+                    "column": "tag",
+                    "relation": "equals",
+                    "condition": "short"
+                }
+            ],
+            "published_scope": "global",
+            "image": {
+                "created_at": "2022-05-04T20:39:10-07:00",
+                "alt": "Short Press On Nails ",
+                "width": 1080,
+                "height": 1350,
+                "src": "//getquickies.com/cdn/shop/collections/3_f2c157b9-5e71-4e9b-acce-4fc13a4941f6.png?v=1696002436"
+            }
+        },
+        {
+            "id": 393983394009,
+            "handle": "solid",
+            "title": "SOLID",
+            "updated_at": "2025-07-09T21:50:09-07:00",
+            "body_html": "",
+            "published_at": "2021-12-17T21:00:31-08:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "disjunctive": false,
+            "rules": [
+                {
+                    "column": "tag",
+                    "relation": "equals",
+                    "condition": "solid"
+                }
+            ],
+            "published_scope": "global",
+            "image": {
+                "created_at": "2022-06-07T14:13:02-07:00",
+                "alt": "Solid Colour Nails",
+                "width": 3000,
+                "height": 3800,
+                "src": "//getquickies.com/cdn/shop/collections/11.png?v=1693274482"
+            }
+        },
+        {
+            "id": 395739627737,
+            "handle": "view-all",
+            "title": "VIEW ALL",
+            "updated_at": "2025-07-09T22:20:11-07:00",
+            "body_html": "",
+            "published_at": "2022-01-26T14:08:52-08:00",
+            "sort_order": "best-selling",
+            "template_suffix": "",
+            "disjunctive": true,
+            "rules": [
+                {
+                    "column": "title",
+                    "relation": "contains",
+                    "condition": "nail"
+                },
+                {
+                    "column": "title",
+                    "relation": "contains",
+                    "condition": "limited"
+                }
+            ],
+            "published_scope": "global",
+            "image": {
+                "created_at": "2022-05-04T20:32:14-07:00",
+                "alt": "Nail Obsessed? Shop Press On Nail Kits and more",
+                "width": 1080,
+                "height": 1350,
+                "src": "//getquickies.com/cdn/shop/collections/1_d3332db7-9d7f-4e0e-917d-a710909c3a38.png?v=1684177406"
+            }
+        }
+    ],
+    "customer": null,
+    "cartNote": null,
+    "cartAttributes": {},
+    "shopLocale": "en",
+    "allTags": [
+        "chrome",
+        "core",
+        "nude",
+        "nudes",
+        "oval",
+        "short",
+        "solid"
+    ],
+    "template": "product",
+    "request": {
+        "path": "/collections/core/products/golden-hour-press-on-nails-24pc",
+        "host": "getquickies.com",
+        "pageType": "product"
+    },
+    "collection": {
+        "id": 403551125721,
+        "handle": "core",
+        "title": "CORE COLLECTION",
+        "updated_at": "2025-07-09T22:20:06-07:00",
+        "body_html": "",
+        "published_at": "2022-07-24T12:35:47-07:00",
+        "sort_order": "created-desc",
+        "template_suffix": "",
+        "disjunctive": false,
+        "rules": [
+            {
+                "column": "tag",
+                "relation": "equals",
+                "condition": "core"
+            }
+        ],
+        "published_scope": "global",
+        "image": {
+            "created_at": "2022-07-24T12:37:23-07:00",
+            "alt": "Press On Nails in Canada",
+            "width": 1080,
+            "height": 1350,
+            "src": "//getquickies.com/cdn/shop/collections/QUICKIE-PRODUCTTEMP.png?v=1684177337"
+        }
+    }
+}

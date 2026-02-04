@@ -1,0 +1,93 @@
+{% comment %}Enqueue Promo Banner --- START{% endcomment %}
+      {% if template.name == 'product' %}
+  <script>
+    window.currentProductCollections = {{ product.collections | json }};
+  </script>
+  {% if customer %}
+    <script>
+      window.customerIsLoggedIn = true;
+      window.customerOrdersCount = {{ customer.orders_count }};
+    </script>
+  {% else %}
+    <script>
+      window.customerIsLoggedIn = false;
+      window.customerOrdersCount = 0;
+    </script>
+  {% endif %}
+<script>
+  window.currentProductCollections = {{ product.collections | json }};
+  window.fiveFingerPromoImage = "{{ 'promo-sticker.png' | asset_url }}";
+  window.fiveFingerProductId = {{ product.id }};
+  window.fiveFingerVariantId = {{ product.variants.first.id }};
+</script>
+<script>
+  (function () {
+    var STORAGE_KEY = 'quickiesPromoPreview';
+
+    function safeSession(cb, fallback) {
+      try {
+        return cb();
+      } catch (err) {
+        return fallback;
+      }
+    }
+
+    function readFlag() {
+      return safeSession(function () {
+        return sessionStorage.getItem(STORAGE_KEY) === 'true';
+      }, false);
+    }
+
+    function persistFlag(value) {
+      safeSession(function () {
+        sessionStorage.setItem(STORAGE_KEY, value ? 'true' : 'false');
+      });
+    }
+
+    function applyFlag(value, emitEvent) {
+      window.promoPreviewEnabled = value;
+      document.documentElement.classList.toggle('promo-preview-mode', value);
+      if (emitEvent) {
+        window.dispatchEvent(
+          new CustomEvent('promoPreviewToggle', {
+            detail: { enabled: value },
+          })
+        );
+      }
+    }
+
+    function announce(value) {
+      var message = value
+        ? 'Promo preview enabled for this tab.'
+        : 'Promo preview disabled for this tab.';
+      console.info(message + ' Press Shift+Alt+P again to toggle.');
+    }
+
+    function toggleFlag() {
+      var nextValue = !readFlag();
+      persistFlag(nextValue);
+      applyFlag(nextValue, true);
+      announce(nextValue);
+    }
+
+    applyFlag(readFlag(), false);
+
+    document.addEventListener('keydown', function (event) {
+      var isToggleCombo =
+        event.altKey &&
+        event.shiftKey &&
+        !event.metaKey &&
+        !event.ctrlKey &&
+        event.code === 'KeyP';
+
+      if (!isToggleCombo) return;
+
+      event.preventDefault();
+      toggleFlag();
+    });
+  })();
+</script>
+<script src="{{ 'devDiscount.js' | asset_url }}"></script>
+{% endif %}
+{{ 'fco-discount-banner.css' | asset_url | stylesheet_tag }}
+{% comment %}Enqueue Promo Banner --- END{% endcomment %}
