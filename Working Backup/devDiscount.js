@@ -29,17 +29,45 @@
   };
   // Keys must be collection handles (not collection titles).
   const SALE_TIER_MAP = {
+    "fivepromo-sale-20": {
+      code: "Quickies-FIVEPROMO-SALE-20",
+      label: "Quickies-FIVEPROMO-SALE-20",
+    },
+    "FIVEPROMO-SALE-18": {
+      code: "Quickies-FIVEPROMO-SALE-18",
+      label: "Quickies-FIVEPROMO-SALE-18",
+    },
+    "FIVEPROMO-SALE-17": {
+      code: "Quickies-FIVEPROMO-SALE-17",
+      label: "Quickies-FIVEPROMO-SALE-17",
+    },
     "fivepromo-sale-15": {
       code: "Quickies-FIVEPROMO-SALE-15",
       label: "Quickies-FIVEPROMO-SALE-15",
+    },
+    "fivepromo-sale-13": {
+      code: "Quickies-FIVEPROMO-SALE-13",
+      label: "Quickies-FIVEPROMO-SALE-13",
     },
     "fivepromo-sale-12": {
       code: "Quickies-FIVEPROMO-SALE-12",
       label: "Quickies-FIVEPROMO-SALE-12",
     },
+    "fivepromo-sale-10": {
+      code: "Quickies-FIVEPROMO-SALE-10",
+      label: "Quickies-FIVEPROMO-SALE-10",
+    },
+    "fivepromo-sale-8": {
+      code: "Quickies-FIVEPROMO-SALE-8",
+      label: "Quickies-FIVEPROMO-SALE-8",
+    },
     "fivepromo-sale-7": {
       code: "Quickies-FIVEPROMO-SALE-7",
       label: "Quickies-FIVEPROMO-SALE-7",
+    },
+    "fivepromo-sale-6": {
+      code: "Quickies-FIVEPROMO-SALE-6",
+      label: "Quickies-FIVEPROMO-SALE-6",
     },
   };
 
@@ -131,10 +159,12 @@
     // Deterministic priority: first key in SALE_TIER_MAP wins when multiple tiers match.
     const tierPriorityHandles = Object.keys(SALE_TIER_MAP);
     for (let i = 0; i < tierPriorityHandles.length; i++) {
-      const tierHandle = tierPriorityHandles[i];
-      if (handles.indexOf(tierHandle) === -1) continue;
+      const tierKey = tierPriorityHandles[i];
+      const normalizedTierKey = normalizeCollectionKey(tierKey);
+      if (!normalizedTierKey) continue;
+      if (handles.indexOf(normalizedTierKey) === -1) continue;
 
-      const tierOverrideConfig = SALE_TIER_MAP[tierHandle];
+      const tierOverrideConfig = SALE_TIER_MAP[tierKey];
       if (!tierOverrideConfig) continue;
       return Object.assign({}, baseConfig, tierOverrideConfig);
     }
