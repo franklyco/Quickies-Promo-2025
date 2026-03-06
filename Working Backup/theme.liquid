@@ -90,4 +90,122 @@
 <script src="{{ 'devDiscount.js' | asset_url }}"></script>
 {% endif %}
 {{ 'fco-discount-banner.css' | asset_url | stylesheet_tag }}
+<script>
+  window.FCO_STOREFRONT_LOGIN_URL = {{ routes.storefront_login_url | json }};
+  window.FCO_LEGACY_REGISTER_URL = {{ routes.account_register_url | json }};
+  window.FCO_CUSTOMER_LOGGED_IN = {{ customer != blank | json }};
+</script>
+{{ 'fco-account-return.js' | asset_url | script_tag }}
+{% if template.name contains 'customers' %}
+  <script>
+    (function () {
+      var STORAGE_KEY = 'quickiesPromoReturnUrl';
+      var PENDING_KEY = 'quickiesPromoReturnPending';
+      var params = new URLSearchParams(window.location.search);
+      var queryReturnUrl = params.get('return_to') || params.get('return_url');
+
+      function safeSessionRead(key) {
+        try {
+          return sessionStorage.getItem(key);
+        } catch (err) {
+          return null;
+        }
+      }
+
+      function safeSessionWrite(key, value) {
+        try {
+          sessionStorage.setItem(key, value);
+        } catch (err) {}
+      }
+
+      function normalizeReturnUrl(value) {
+        if (!value) return '';
+        try {
+          var decoded = decodeURIComponent(value);
+          var decodedUrl = new URL(decoded, window.location.origin);
+          if (decodedUrl.origin !== window.location.origin) return '';
+          return decodedUrl.pathname + decodedUrl.search + decodedUrl.hash;
+        } catch (err) {
+          try {
+            var url = new URL(value, window.location.origin);
+            if (url.origin !== window.location.origin) return '';
+            return url.pathname + url.search + url.hash;
+          } catch (innerErr) {
+            return '';
+          }
+        }
+      }
+
+      var normalizedQueryReturn = normalizeReturnUrl(queryReturnUrl);
+      if (normalizedQueryReturn) {
+        safeSessionWrite(STORAGE_KEY, normalizedQueryReturn);
+        safeSessionWrite(PENDING_KEY, 'true');
+      }
+
+      var returnUrl = normalizedQueryReturn || normalizeReturnUrl(safeSessionRead(STORAGE_KEY));
+      var hasPendingPromoRedirect = safeSessionRead(PENDING_KEY) === 'true';
+
+      function updateLinks() {
+        if (!returnUrl) return;
+
+        document.querySelectorAll('a[href^="/account/login"], a[href^="/account/register"]').forEach(function (link) {
+          try {
+            var url = new URL(link.getAttribute('href'), window.location.origin);
+            url.searchParams.set('return_to', returnUrl);
+            url.searchParams.set('return_url', returnUrl);
+            link.setAttribute('href', url.pathname + url.search);
+          } catch (err) {}
+        });
+
+        document.querySelectorAll('form[action*="/account/login"], form[action*="/account/register"]').forEach(function (form) {
+          var returnToInput = form.querySelector('input[name="return_to"]');
+          if (!returnToInput) {
+            returnToInput = document.createElement('input');
+            returnToInput.type = 'hidden';
+            returnToInput.name = 'return_to';
+            form.appendChild(returnToInput);
+          }
+          returnToInput.value = returnUrl;
+
+          var input = form.querySelector('input[name="return_url"]');
+          if (!input) {
+            input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'return_url';
+            form.appendChild(input);
+          }
+          input.value = returnUrl;
+
+          try {
+            var actionUrl = new URL(form.getAttribute('action') || window.location.pathname, window.location.origin);
+            actionUrl.searchParams.set('return_to', returnUrl);
+            actionUrl.searchParams.set('return_url', returnUrl);
+            form.setAttribute('action', actionUrl.pathname + actionUrl.search);
+          } catch (err) {}
+        });
+      }
+
+      function maybeRedirectToStoredProduct() {
+        if (!hasPendingPromoRedirect || !returnUrl) return;
+        var path = window.location.pathname.replace(/\/+$/, '');
+        var isAuthPage = path === '/account/login' || path === '/account/register';
+        if (isAuthPage) return;
+        if (path === '/account') {
+          safeSessionWrite(PENDING_KEY, 'false');
+          window.location.replace(returnUrl);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+          updateLinks();
+          maybeRedirectToStoredProduct();
+        });
+      } else {
+        updateLinks();
+        maybeRedirectToStoredProduct();
+      }
+    })();
+  </script>
+{% endif %}
 {% comment %}Enqueue Promo Banner --- END{% endcomment %}
