@@ -617,6 +617,16 @@
     return `${basePath}${separator}return_to=${returnValue}&return_url=${returnValue}`;
   }
 
+  function getStorefrontLoginBasePath() {
+    if (
+      typeof window.FCO_STOREFRONT_LOGIN_URL === "string" &&
+      window.FCO_STOREFRONT_LOGIN_URL.trim().length > 0
+    ) {
+      return window.FCO_STOREFRONT_LOGIN_URL;
+    }
+    return "/customer_authentication/login";
+  }
+
   function injectBannerAboveTitle({
     heading,
     ctaType,
@@ -641,8 +651,9 @@
           typeof authRedirectPath === "function"
             ? authRedirectPath({ heading, ctaType, variantId })
             : authRedirectPath;
+        const storefrontLoginPath = getStorefrontLoginBasePath();
         const registerUrl = buildAccountUrl(
-          "/account/register",
+          storefrontLoginPath,
           redirectPath
         );
         ctaHTML = `<a class="fco-banner__cta fco-banner__cta--register" href="${registerUrl}">${ctaText}</a>`;

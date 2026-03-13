@@ -176,8 +176,10 @@
     window.location.replace(returnTo);
   }
 
-  async function handleRegisterClick(event) {
-    const link = event.target.closest("a.fco-banner__cta--register");
+  async function handleAuthClick(event) {
+    const link = event.target.closest(
+      "a.fco-banner__cta--register, a.fco-banner__cta--login, a[data-fco-auth-cta]"
+    );
     if (!link) return;
 
     if (
@@ -194,15 +196,23 @@
     event.preventDefault();
 
     const capturedReturnTo = storeReturnTo(currentRelativeUrl()) || "/";
+    const requestedMode = (link.dataset.fcoAuthCta || "").toLowerCase();
+    const wantsRegister =
+      requestedMode === "register" ||
+      link.classList.contains("fco-banner__cta--register");
 
     try {
-      const mode = await detectAccountsMode();
-      const targetBase =
-        mode === "legacy" ? LEGACY_REGISTER_URL : STOREFRONT_LOGIN_URL;
+      let targetBase = STOREFRONT_LOGIN_URL;
+      if (wantsRegister) {
+        const mode = await detectAccountsMode();
+        targetBase = mode === "legacy" ? LEGACY_REGISTER_URL : STOREFRONT_LOGIN_URL;
+      }
       window.location.href = buildRedirectUrl(targetBase, capturedReturnTo);
     } catch (err) {
       // Fall back to authored href if detection/navigation fails.
-      window.location.href = link.getAttribute("href") || LEGACY_REGISTER_URL;
+      window.location.href =
+        link.getAttribute("href") ||
+        (wantsRegister ? LEGACY_REGISTER_URL : STOREFRONT_LOGIN_URL);
     }
   }
 
@@ -212,7 +222,7 @@
     storeReturnTo(returnTo);
   }
 
-  document.addEventListener("click", handleRegisterClick);
+  document.addEventListener("click", handleAuthClick);
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {

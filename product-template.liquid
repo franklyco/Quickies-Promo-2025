@@ -409,7 +409,26 @@
 
 
         <div class="product-content col-span-full {{ content_desktop_width }} px-section lg:px-0 ">
-          <div class="product-block-container w-full max-w-full xl:grid xl:grid-cols-12">
+          <div class="product-block-container quickies-test w-full max-w-full xl:grid xl:grid-cols-12">
+            {%- if shop.customer_accounts_enabled and customer == blank -%}
+              {%- liquid
+                assign return_to_path = request.path
+                if request.query_string != blank
+                  assign return_to_path = return_to_path | append: '?' | append: request.query_string
+                endif
+                assign encoded_return_to = return_to_path | url_encode
+                assign auth_url = routes.storefront_login_url | append: '?return_to=' | append: encoded_return_to
+              -%}
+              <div class="quickies-test-auth-link" style="display:none;">
+                <a
+                  class="fco-banner__cta fco-banner__cta--login"
+                  data-fco-auth-cta="login"
+                  href="{{ auth_url }}"
+                >
+                  Test auth return link
+                </a>
+              </div>
+            {%- endif -%}
             <div class="xl:col-span-10 xl:col-start-2 relative">
 
             {%- assign last_block_was_card = false -%}
